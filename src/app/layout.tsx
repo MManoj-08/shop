@@ -14,7 +14,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Mangalore Stores Sanjanagar - Fruits, Vegetables & Coastal Snacks, Bangalore",
+  title: "Kudla Santhe - Fruits, Vegetables & Coastal Snacks, Sanjanagar, Bangalore",
   description:
     "Fresh fruits, vegetables and authentic Mangalore-Udupi snacks, delivered to your home in Bangalore.",
 };

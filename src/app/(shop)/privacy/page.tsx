@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "Privacy | Mangalore Stores" };
+export const metadata: Metadata = { title: "Privacy | Kudla Santhe" };
 
 export default function PrivacyPage() {
   return (

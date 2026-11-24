@@ -52,10 +52,10 @@ export async function requestReset(_prev: ForgotState, formData: FormData): Prom
   try {
     await sendMail({
       to: user.email,
-      subject: "Reset your Mangalore Stores password",
+      subject: "Reset your Kudla Santhe password",
       text:
         `Hello${user.name ? " " + user.name : ""},\n\n` +
-        `Someone asked to reset the password for the Mangalore Stores account with the mobile number ending ${user.phone.slice(-4)}.\n\n` +
+        `Someone asked to reset the password for the Kudla Santhe account with the mobile number ending ${user.phone.slice(-4)}.\n\n` +
         `To choose a new password, open this link within ${RESET_TTL_MIN} minutes:\n${link}\n\n` +
         `If you did not ask for this, ignore this email. Your password stays the same.\n`,
     });

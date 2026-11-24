@@ -24,7 +24,7 @@ export function ShopLocation() {
         <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-2xl border border-green-950/10 bg-green-50 sm:h-44 sm:w-44">
           <iframe
             src={embed}
-            title="Map showing where Mangalore Stores is"
+            title="Map showing where Kudla Santhe is"
             loading="lazy"
             referrerPolicy="no-referrer"
             tabIndex={-1}
@@ -50,7 +50,7 @@ export function ShopLocation() {
       )}
       <div className="flex min-w-0 flex-col justify-center gap-1.5 sm:max-w-xs">
         <p className="text-xs font-semibold uppercase tracking-wider text-green-800">Visit us</p>
-        <p className="font-display text-lg font-medium leading-snug text-green-950">Mangalore Stores</p>
+        <p className="font-display text-lg font-medium leading-snug text-green-950">Kudla Santhe</p>
         <p className="text-sm leading-relaxed text-stone-600">{address}</p>
         {hasMap && (
           <div className="mt-1 flex flex-wrap gap-2">

@@ -12,7 +12,7 @@ export const payDeadline = () => new Date(Date.now() + PAY_WINDOW_MIN * 60_000);
 export function upiConfig() {
   const vpa = process.env.SHOP_UPI_ID?.trim();
   if (!vpa) return null;
-  return { vpa, name: process.env.SHOP_UPI_NAME?.trim() || "Mangalore Stores" };
+  return { vpa, name: process.env.SHOP_UPI_NAME?.trim() || "Kudla Santhe" };
 }
 
 // The link behind the QR code. UPI apps open it with the amount and note already filled in.

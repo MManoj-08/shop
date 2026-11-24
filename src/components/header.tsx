@@ -24,7 +24,7 @@ function Logo() {
         </svg>
       </span>
       <span className="hidden font-display text-xl font-semibold tracking-tight text-green-950 min-[460px]:inline">
-        Mangalore Stores
+        Kudla Santhe
       </span>
     </Link>
   );

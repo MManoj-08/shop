@@ -4,7 +4,7 @@ import { findValidReset } from "@/lib/reset";
 import { ResetForm } from "./reset-form";
 
 export const metadata: Metadata = {
-  title: "Choose a new password | Mangalore Stores",
+  title: "Choose a new password | Kudla Santhe",
   robots: { index: false, follow: false },
   // the secret is in this page's address, so never pass it on to another site
   referrer: "no-referrer",

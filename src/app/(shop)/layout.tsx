@@ -61,7 +61,7 @@ export default function ShopLayout({ children }: LayoutProps<"/">) {
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-green-950/10 pt-5 text-xs text-green-950/60">
             <p>
-              <span className="font-semibold text-green-950">Mangalore Stores, Sanjanagar</span> · Fresh produce &amp; coastal
+              <span className="font-semibold text-green-950">Kudla Santhe, Sanjanagar</span> · Fresh produce &amp; coastal
               snacks, delivered in Bangalore
               {process.env.FSSAI_NO && <> · FSSAI Lic. No: {process.env.FSSAI_NO}</>}
             </p>

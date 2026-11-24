@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DeliveryChecker } from "@/components/delivery-check";
 
-export const metadata: Metadata = { title: "Delivery & help | Mangalore Stores" };
+export const metadata: Metadata = { title: "Delivery & help | Kudla Santhe" };
 
 const faqs = [
   { q: "Which areas do you deliver to?", a: "We deliver to selected areas around our shop in Bangalore. Use the button above to check your location in one tap." },

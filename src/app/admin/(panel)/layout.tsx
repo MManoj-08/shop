@@ -6,7 +6,7 @@ import { ownerLogout } from "@/actions/auth";
 import { AdminNav } from "@/components/admin-nav";
 
 export const metadata: Metadata = {
-  title: "Owner dashboard | Mangalore Stores",
+  title: "Owner dashboard | Kudla Santhe",
   robots: { index: false, follow: false },
 };
 
@@ -25,7 +25,7 @@ export default async function AdminLayout({ children }: LayoutProps<"/admin">) {
                 <path d="M20 3C10 3 4 8 4 15c0 1.2.2 2.3.6 3.3C6.5 14.6 10 11.7 15 10c-4 2.4-6.7 5.5-8.1 9.6.9.3 2 .4 3.1.4 7 0 10-6.5 10-17z" />
               </svg>
             </span>
-            <span className="font-display text-lg font-semibold text-green-950">Mangalore Stores</span>
+            <span className="font-display text-lg font-semibold text-green-950">Kudla Santhe</span>
             <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-900">Owner</span>
           </div>
 

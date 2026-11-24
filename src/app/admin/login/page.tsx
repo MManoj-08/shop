@@ -4,7 +4,7 @@ import { getOwner } from "@/lib/session";
 import { LoginForm } from "@/app/(auth)/login/login-form";
 
 export const metadata: Metadata = {
-  title: "Owner login | Mangalore Stores",
+  title: "Owner login | Kudla Santhe",
   robots: { index: false, follow: false },
 };
 

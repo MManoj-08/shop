@@ -11,7 +11,7 @@ import { ProductBrowser } from "@/components/product-browser";
 export async function generateMetadata(props: PageProps<"/category/[slug]">): Promise<Metadata> {
   const { slug } = await props.params;
   const c = await db.category.findUnique({ where: { slug } });
-  return { title: c ? `${c.nameEn} | Mangalore Stores` : "Category | Mangalore Stores" };
+  return { title: c ? `${c.nameEn} | Kudla Santhe` : "Category | Kudla Santhe" };
 }
 
 export default async function CategoryPage(props: PageProps<"/category/[slug]">) {

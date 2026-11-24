@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PHOTOS } from "@/lib/photos";
 
-export const metadata: Metadata = { title: "About us | Mangalore Stores" };
+export const metadata: Metadata = { title: "About us | Kudla Santhe" };
 
 const values = [
   { icon: "🌿", t: "Fresh, always", d: "Hand-picked produce that never sits around from yesterday." },
@@ -21,7 +21,7 @@ export default function AboutPage() {
           </Link>{" "}
           › About us
         </p>
-        <h1 className="mt-1 font-display text-3xl font-bold text-green-950">About Mangalore Stores</h1>
+        <h1 className="mt-1 font-display text-3xl font-bold text-green-950">About Kudla Santhe</h1>
       </div>
 
       <section className="grid overflow-hidden rounded-3xl bg-green-900 text-white md:grid-cols-2">

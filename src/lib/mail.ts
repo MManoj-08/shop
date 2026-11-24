@@ -15,7 +15,7 @@ export async function sendMail({ to, subject, text }: { to: string; subject: str
     auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
   });
   await transport.sendMail({
-    from: process.env.MAIL_FROM?.trim() || `Mangalore Stores <${process.env.SMTP_USER}>`,
+    from: process.env.MAIL_FROM?.trim() || `Kudla Santhe <${process.env.SMTP_USER}>`,
     to,
     subject,
     text,

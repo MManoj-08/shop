@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ForgotForm } from "./forgot-form";
 
-export const metadata: Metadata = { title: "Forgot password | Mangalore Stores", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Forgot password | Kudla Santhe", robots: { index: false, follow: false } };
 
 export default function ForgotPasswordPage() {
   return (

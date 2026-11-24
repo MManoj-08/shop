@@ -8,7 +8,7 @@ import { rupees } from "@/lib/format";
 import { NameForm } from "./name-form";
 import { EmailForm } from "./email-form";
 
-export const metadata: Metadata = { title: "My profile | Mangalore Stores" };
+export const metadata: Metadata = { title: "My profile | Kudla Santhe" };
 
 export default async function ProfilePage() {
   const user = await getCustomer();

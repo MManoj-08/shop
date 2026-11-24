@@ -1,4 +1,4 @@
-# Mangalore Stores
+# Kudla Santhe
 
 A full-stack grocery delivery web app for a real neighbourhood shop in Bangalore (fresh produce and Mangalore & Udupi snacks): a mobile-friendly storefront for customers and a separate dashboard for the owner to run the business day to day.
 

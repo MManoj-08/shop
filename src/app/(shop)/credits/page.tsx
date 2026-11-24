@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import credits from "../../../../data/photo-credits.json";
 
-export const metadata: Metadata = { title: "Photo credits | Mangalore Stores" };
+export const metadata: Metadata = { title: "Photo credits | Kudla Santhe" };
 
 // Some fruit and vegetable photos come from Wikimedia Commons; their licences ask us to name the photographer.
 export default function Credits() {

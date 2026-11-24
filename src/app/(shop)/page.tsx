@@ -160,7 +160,7 @@ export default async function Home() {
       <section className="grid items-center gap-10 pt-2 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:pt-8">
         <div className="slide-up">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-            Mangalore Stores · Sanjanagar, Bangalore
+            Kudla Santhe · Sanjanagar, Bangalore
           </p>
           <h1 className="mt-5 font-display text-5xl font-medium leading-[1.05] tracking-tight text-green-950 sm:text-6xl lg:text-[4.5rem]">
             Fresh groceries,

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { parseListParams } from "@/lib/catalog";
 import { ProductBrowser } from "@/components/product-browser";
 
-export const metadata: Metadata = { title: "All products | Mangalore Stores" };
+export const metadata: Metadata = { title: "All products | Kudla Santhe" };
 
 export default async function ShopPage(props: PageProps<"/shop">) {
   const { q, sort, limit, stock, price } = parseListParams(await props.searchParams);
