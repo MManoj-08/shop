@@ -1,0 +1,788 @@
+{
+ "_note": "Fresh produce added to the shop. Prices are starting guesses in rupees: change them in the owner screen (Products & stock). Sizes: [unit, quantity, price]. Units: KG, GRAM, PIECE, PACK, DOZEN, LITRE, BUNCH.",
+ "categories": {
+  "vegetables": {
+   "en": "Vegetables",
+   "kn": "ತರಕಾರಿಗಳು",
+   "order": 10
+  },
+  "leafy-greens": {
+   "en": "Leafy Greens & Herbs",
+   "kn": "ಸೊಪ್ಪು",
+   "order": 11
+  },
+  "fruits": {
+   "en": "Fruits",
+   "kn": "ಹಣ್ಣುಗಳು",
+   "order": 12
+  }
+ },
+ "items": [
+  {
+   "slug": "potato",
+   "en": "Potato",
+   "kn": "ಆಲೂಗಡ್ಡೆ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     1,
+     35
+    ]
+   ],
+   "q": "potatoes"
+  },
+  {
+   "slug": "carrot",
+   "en": "Carrot",
+   "kn": "ಕ್ಯಾರೆಟ್",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     30
+    ],
+    [
+     "KG",
+     1,
+     58
+    ]
+   ],
+   "q": "carrots vegetable"
+  },
+  {
+   "slug": "beans",
+   "en": "Beans",
+   "kn": "ಬೀನ್ಸ್",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     40
+    ],
+    [
+     "KG",
+     1,
+     78
+    ]
+   ],
+   "q": "green beans"
+  },
+  {
+   "slug": "cabbage",
+   "en": "Cabbage",
+   "kn": "ಎಲೆಕೋಸು",
+   "cat": "vegetables",
+   "v": [
+    [
+     "PIECE",
+     1,
+     35
+    ]
+   ],
+   "q": "cabbage head"
+  },
+  {
+   "slug": "cauliflower",
+   "en": "Cauliflower",
+   "kn": "ಹೂಕೋಸು",
+   "cat": "vegetables",
+   "v": [
+    [
+     "PIECE",
+     1,
+     40
+    ]
+   ],
+   "q": "cauliflower"
+  },
+  {
+   "slug": "green-chilli",
+   "en": "Green Chilli",
+   "kn": "ಹಸಿ ಮೆಣಸಿನಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "GRAM",
+     250,
+     20
+    ]
+   ],
+   "q": "green chillies"
+  },
+  {
+   "slug": "ginger",
+   "en": "Ginger",
+   "kn": "ಶುಂಠಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "GRAM",
+     250,
+     40
+    ]
+   ],
+   "q": "ginger root"
+  },
+  {
+   "slug": "garlic",
+   "en": "Garlic",
+   "kn": "ಬೆಳ್ಳುಳ್ಳಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "GRAM",
+     250,
+     60
+    ]
+   ],
+   "q": "garlic bulbs"
+  },
+  {
+   "slug": "capsicum",
+   "en": "Capsicum",
+   "kn": "ದೊಣ್ಣೆ ಮೆಣಸಿನಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     40
+    ]
+   ],
+   "q": "green bell pepper"
+  },
+  {
+   "slug": "ladys-finger",
+   "en": "Lady's Finger (Bhindi)",
+   "kn": "ಬೆಂಡೆಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     30
+    ]
+   ],
+   "q": "okra"
+  },
+  {
+   "slug": "mangalore-cucumber",
+   "en": "Mangalore Cucumber",
+   "kn": "ಮಂಗಳೂರು ಸೌತೆಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     1,
+     40
+    ]
+   ],
+   "q": "Mangalore cucumber"
+  },
+  {
+   "slug": "drumstick",
+   "en": "Drumstick",
+   "kn": "ನುಗ್ಗೆಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "PIECE",
+     6,
+     40
+    ]
+   ],
+   "q": "drumstick moringa pods"
+  },
+  {
+   "slug": "bitter-gourd",
+   "en": "Bitter Gourd",
+   "kn": "ಹಾಗಲಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     35
+    ]
+   ],
+   "q": "bitter gourd"
+  },
+  {
+   "slug": "ridge-gourd",
+   "en": "Ridge Gourd",
+   "kn": "ಹೀರೆಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     30
+    ]
+   ],
+   "q": "ridge gourd"
+  },
+  {
+   "slug": "snake-gourd",
+   "en": "Snake Gourd",
+   "kn": "ಪಡವಲಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "PIECE",
+     1,
+     30
+    ]
+   ],
+   "q": "snake gourd"
+  },
+  {
+   "slug": "bottle-gourd",
+   "en": "Bottle Gourd",
+   "kn": "ಸೋರೆಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "PIECE",
+     1,
+     35
+    ]
+   ],
+   "q": "bottle gourd"
+  },
+  {
+   "slug": "red-pumpkin",
+   "en": "Red Pumpkin",
+   "kn": "ಸಿಹಿ ಕುಂಬಳಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     1,
+     35
+    ]
+   ],
+   "q": "pumpkin cut orange"
+  },
+  {
+   "slug": "beetroot",
+   "en": "Beetroot",
+   "kn": "ಬೀಟ್‌ರೂಟ್",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     25
+    ]
+   ],
+   "q": "beetroot"
+  },
+  {
+   "slug": "radish",
+   "en": "Radish",
+   "kn": "ಮೂಲಂಗಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     25
+    ]
+   ],
+   "q": "white radish daikon"
+  },
+  {
+   "slug": "ivy-gourd-tondekai",
+   "en": "Ivy Gourd (Tondekai)",
+   "kn": "ತೊಂಡೆಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     35
+    ]
+   ],
+   "q": "ivy gourd Coccinia"
+  },
+  {
+   "slug": "raw-jackfruit",
+   "en": "Raw Jackfruit",
+   "kn": "ಹಲಸಿನಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     1,
+     50
+    ]
+   ],
+   "q": "jackfruit"
+  },
+  {
+   "slug": "elephant-foot-yam",
+   "en": "Elephant Foot Yam (Suvarna Gadde)",
+   "kn": "ಸುವರ್ಣ ಗಡ್ಡೆ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     1,
+     70
+    ]
+   ],
+   "q": "elephant foot yam"
+  },
+  {
+   "slug": "sweet-potato",
+   "en": "Sweet Potato",
+   "kn": "ಗೆಣಸು",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     35
+    ]
+   ],
+   "q": "sweet potatoes"
+  },
+  {
+   "slug": "raw-mango",
+   "en": "Raw Mango",
+   "kn": "ಮಾವಿನಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "KG",
+     0.5,
+     50
+    ]
+   ],
+   "q": "raw green mango"
+  },
+  {
+   "slug": "coconut",
+   "en": "Coconut",
+   "kn": "ತೆಂಗಿನಕಾಯಿ",
+   "cat": "vegetables",
+   "v": [
+    [
+     "PIECE",
+     1,
+     40
+    ]
+   ],
+   "q": "coconut husked"
+  },
+  {
+   "slug": "lemon",
+   "en": "Lemon",
+   "kn": "ನಿಂಬೆಹಣ್ಣು",
+   "cat": "vegetables",
+   "v": [
+    [
+     "PIECE",
+     4,
+     20
+    ]
+   ],
+   "q": "lemons"
+  },
+  {
+   "slug": "coriander-leaves",
+   "en": "Coriander Leaves",
+   "kn": "ಕೊತ್ತಂಬರಿ ಸೊಪ್ಪು",
+   "cat": "leafy-greens",
+   "v": [
+    [
+     "BUNCH",
+     1,
+     15
+    ]
+   ],
+   "q": "coriander leaves bunch"
+  },
+  {
+   "slug": "curry-leaves",
+   "en": "Curry Leaves",
+   "kn": "ಕರಿಬೇವು",
+   "cat": "leafy-greens",
+   "v": [
+    [
+     "BUNCH",
+     1,
+     10
+    ]
+   ],
+   "q": "curry leaves"
+  },
+  {
+   "slug": "mint-leaves",
+   "en": "Mint Leaves",
+   "kn": "ಪುದೀನ",
+   "cat": "leafy-greens",
+   "v": [
+    [
+     "BUNCH",
+     1,
+     15
+    ]
+   ],
+   "q": "mint leaves bunch"
+  },
+  {
+   "slug": "spinach-palak",
+   "en": "Spinach (Palak)",
+   "kn": "ಪಾಲಕ್ ಸೊಪ್ಪು",
+   "cat": "leafy-greens",
+   "v": [
+    [
+     "BUNCH",
+     1,
+     20
+    ]
+   ],
+   "q": "spinach leaves"
+  },
+  {
+   "slug": "fenugreek-methi",
+   "en": "Fenugreek Leaves (Methi)",
+   "kn": "ಮೆಂತ್ಯ ಸೊಪ್ಪು",
+   "cat": "leafy-greens",
+   "v": [
+    [
+     "BUNCH",
+     1,
+     20
+    ]
+   ],
+   "q": "fenugreek leaves"
+  },
+  {
+   "slug": "dill-sabsige",
+   "en": "Dill Leaves (Sabsige)",
+   "kn": "ಸಬ್ಬಸಿಗೆ ಸೊಪ್ಪು",
+   "cat": "leafy-greens",
+   "v": [
+    [
+     "BUNCH",
+     1,
+     20
+    ]
+   ],
+   "q": "dill herb bunch"
+  },
+  {
+   "slug": "amaranth-harive",
+   "en": "Amaranth Leaves (Harive)",
+   "kn": "ಹರಿವೆ ಸೊಪ್ಪು",
+   "cat": "leafy-greens",
+   "v": [
+    [
+     "BUNCH",
+     1,
+     20
+    ]
+   ],
+   "q": "amaranth leaves vegetable"
+  },
+  {
+   "slug": "apple",
+   "en": "Apple",
+   "kn": "ಸೇಬು",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     180
+    ]
+   ],
+   "q": "red apples"
+  },
+  {
+   "slug": "coorg-orange",
+   "en": "Orange (Coorg)",
+   "kn": "ಕೊಡಗು ಕಿತ್ತಳೆ",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     80
+    ]
+   ],
+   "q": "mandarin oranges fruit"
+  },
+  {
+   "slug": "mosambi",
+   "en": "Mosambi (Sweet Lime)",
+   "kn": "ಮೂಸಂಬಿ",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     70
+    ]
+   ],
+   "q": "sweet lime fruit"
+  },
+  {
+   "slug": "grapes",
+   "en": "Grapes (Green)",
+   "kn": "ದ್ರಾಕ್ಷಿ",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     0.5,
+     60
+    ]
+   ],
+   "q": "green grapes bunch"
+  },
+  {
+   "slug": "pomegranate",
+   "en": "Pomegranate",
+   "kn": "ದಾಳಿಂಬೆ",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     180
+    ]
+   ],
+   "q": "pomegranate fruit"
+  },
+  {
+   "slug": "watermelon",
+   "en": "Watermelon",
+   "kn": "ಕಲ್ಲಂಗಡಿ",
+   "cat": "fruits",
+   "v": [
+    [
+     "PIECE",
+     1,
+     60
+    ]
+   ],
+   "q": "watermelon"
+  },
+  {
+   "slug": "muskmelon",
+   "en": "Muskmelon",
+   "kn": "ಕರಬೂಜ",
+   "cat": "fruits",
+   "v": [
+    [
+     "PIECE",
+     1,
+     50
+    ]
+   ],
+   "q": "muskmelon cantaloupe"
+  },
+  {
+   "slug": "guava",
+   "en": "Guava",
+   "kn": "ಸೀಬೆಹಣ್ಣು",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     80
+    ]
+   ],
+   "q": "guava fruit"
+  },
+  {
+   "slug": "sapota-chikoo",
+   "en": "Sapota (Chikoo)",
+   "kn": "ಸಪೋಟ",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     70
+    ]
+   ],
+   "q": "sapodilla fruit"
+  },
+  {
+   "slug": "custard-apple",
+   "en": "Custard Apple (Seethaphal)",
+   "kn": "ಸೀತಾಫಲ",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     120
+    ]
+   ],
+   "q": "custard apple Annona squamosa"
+  },
+  {
+   "slug": "ripe-jackfruit",
+   "en": "Ripe Jackfruit (bulbs)",
+   "kn": "ಹಲಸಿನಹಣ್ಣು",
+   "cat": "fruits",
+   "v": [
+    [
+     "GRAM",
+     500,
+     80
+    ]
+   ],
+   "q": "jackfruit bulbs"
+  },
+  {
+   "slug": "banana-nendran",
+   "en": "Banana (Nendran)",
+   "kn": "ನೇಂದ್ರ ಬಾಳೆ",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     70
+    ]
+   ],
+   "q": "nendran banana"
+  },
+  {
+   "slug": "banana-robusta",
+   "en": "Banana (Robusta / Pachbale)",
+   "kn": "ಪಚ್ಚಬಾಳೆ",
+   "cat": "fruits",
+   "v": [
+    [
+     "DOZEN",
+     1,
+     50
+    ]
+   ],
+   "q": "Cavendish bananas bunch"
+  },
+  {
+   "slug": "tender-coconut",
+   "en": "Tender Coconut (Bondaa)",
+   "kn": "ಎಳನೀರು",
+   "cat": "fruits",
+   "v": [
+    [
+     "PIECE",
+     1,
+     45
+    ]
+   ],
+   "q": "tender coconut"
+  },
+  {
+   "slug": "dragon-fruit",
+   "en": "Dragon Fruit",
+   "kn": "ಡ್ರ್ಯಾಗನ್ ಫ್ರೂಟ್",
+   "cat": "fruits",
+   "v": [
+    [
+     "PIECE",
+     1,
+     70
+    ]
+   ],
+   "q": "dragon fruit pitaya"
+  },
+  {
+   "slug": "kiwi",
+   "en": "Kiwi",
+   "kn": "ಕಿವಿ ಹಣ್ಣು",
+   "cat": "fruits",
+   "v": [
+    [
+     "PIECE",
+     3,
+     90
+    ]
+   ],
+   "q": "kiwifruit"
+  },
+  {
+   "slug": "pear",
+   "en": "Pear",
+   "kn": "ನಾಸ್ಪತಿ",
+   "cat": "fruits",
+   "v": [
+    [
+     "KG",
+     1,
+     150
+    ]
+   ],
+   "q": "pears fruit"
+  },
+  {
+   "slug": "mangosteen",
+   "en": "Mangosteen",
+   "kn": "ಮ್ಯಾಂಗೋಸ್ಟೀನ್",
+   "cat": "fruits",
+   "v": [
+    [
+     "GRAM",
+     500,
+     150
+    ]
+   ],
+   "q": "mangosteen fruit"
+  },
+  {
+   "slug": "rambutan",
+   "en": "Rambutan",
+   "kn": "ರಂಬುಟಾನ್",
+   "cat": "fruits",
+   "v": [
+    [
+     "GRAM",
+     500,
+     160
+    ]
+   ],
+   "q": "rambutan fruit"
+  },
+  {
+   "slug": "strawberry",
+   "en": "Strawberry",
+   "kn": "ಸ್ಟ್ರಾಬೆರಿ",
+   "cat": "fruits",
+   "v": [
+    [
+     "GRAM",
+     200,
+     80
+    ]
+   ],
+   "q": "strawberries"
+  },
+  {
+   "slug": "jamun-nerale",
+   "en": "Jamun (Nerale)",
+   "kn": "ನೇರಳೆ ಹಣ್ಣು",
+   "cat": "fruits",
+   "v": [
+    [
+     "GRAM",
+     250,
+     60
+    ]
+   ],
+   "q": "Syzygium cumini fruit"
+  }
+ ]
+}

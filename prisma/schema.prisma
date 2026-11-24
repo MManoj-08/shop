@@ -1,0 +1,200 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  STAFF
+  OWNER
+}
+
+enum Unit {
+  KG
+  GRAM
+  PIECE
+  PACK
+  DOZEN
+  LITRE
+  BUNCH
+}
+
+enum OrderStatus {
+  PLACED
+  ACCEPTED
+  PACKED
+  OUT_FOR_DELIVERY
+  DELIVERED
+  CANCELLED
+}
+
+enum PaymentMethod {
+  COD
+  ONLINE
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+model User {
+  id        String    @id @default(cuid())
+  phone     String    @unique
+  name      String?
+  role      Role      @default(CUSTOMER)
+  // bcrypt hash of the password. Never store the password itself.
+  passwordHash String?
+  // After too many wrong passwords the account is locked for a few minutes
+  failedLogins Int       @default(0)
+  lockedUntil  DateTime?
+  // where password-reset links are sent
+  email        String?
+  resets       PasswordReset[]
+  addresses Address[]
+  orders    Order[]
+  createdAt DateTime  @default(now())
+}
+
+model Address {
+  id       String  @id @default(cuid())
+  userId   String
+  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  line1    String
+  landmark String?
+  area     String
+  pincode  String
+  lat      Float
+  lng      Float
+  orders   Order[]
+}
+
+model Category {
+  id        String     @id @default(cuid())
+  slug      String     @unique
+  nameEn    String
+  nameKn    String?
+  sortOrder Int        @default(0)
+  // Optional parent, so categories can be grouped into dropdown menus
+  parentId  String?
+  parent    Category?  @relation("CategoryTree", fields: [parentId], references: [id])
+  children  Category[] @relation("CategoryTree")
+  products  Product[]
+}
+
+model Product {
+  id          String           @id @default(cuid())
+  slug        String           @unique
+  nameEn      String
+  nameKn      String?
+  description String?
+  imageUrl    String?
+  categoryId  String
+  category    Category         @relation(fields: [categoryId], references: [id])
+  inStock     Boolean          @default(true) // daily stock toggle
+  active      Boolean          @default(true)
+  variants    ProductVariant[]
+  createdAt   DateTime         @default(now())
+}
+
+// One product can be sold in several sizes, e.g. 250 g / 500 g / 1 kg
+model ProductVariant {
+  id         String      @id @default(cuid())
+  productId  String
+  product    Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  unit       Unit
+  quantity   Float // e.g. 0.5 with unit KG, or 200 with unit GRAM
+  pricePaise Int // store money as integer paise
+  items      OrderItem[]
+}
+
+model DeliverySlot {
+  id        String  @id @default(cuid())
+  label     String // "7 AM - 10 AM"
+  startHour Int
+  endHour   Int
+  active    Boolean @default(true)
+  orders    Order[]
+}
+
+// Settings for the shop's delivery area (single row for now)
+model DeliveryZone {
+  id             String @id @default(cuid())
+  name           String
+  shopLat        Float
+  shopLng        Float
+  radiusKm       Float  @default(5)
+  feePaise       Int    @default(0)
+  freeAbovePaise Int?
+  minOrderPaise  Int    @default(0)
+}
+
+model Order {
+  id            String        @id @default(cuid())
+  number        Int           @unique @default(autoincrement())
+  userId        String
+  user          User          @relation(fields: [userId], references: [id])
+  addressId     String
+  address       Address       @relation(fields: [addressId], references: [id])
+  slotId        String
+  slot          DeliverySlot  @relation(fields: [slotId], references: [id])
+  deliveryDate  DateTime
+  status        OrderStatus   @default(PLACED)
+  subtotalPaise Int
+  feePaise      Int
+  totalPaise    Int
+  paymentMethod PaymentMethod
+  items         OrderItem[]
+  payment       Payment?
+  createdAt     DateTime      @default(now())
+}
+
+model OrderItem {
+  id         String         @id @default(cuid())
+  orderId    String
+  order      Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  variantId  String
+  variant    ProductVariant @relation(fields: [variantId], references: [id])
+  nameSnap   String // product name at time of order
+  pricePaise Int // price at time of order
+  qty        Int
+}
+
+model Payment {
+  id                String        @id @default(cuid())
+  orderId           String        @unique
+  order             Order         @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  status            PaymentStatus @default(PENDING)
+  razorpayOrderId   String?
+  razorpayPaymentId String?
+  amountPaise       Int
+  // UPI payment checked by hand: the customer types the 12-digit reference (UTR) of their
+  // payment and the owner confirms it in their own bank / UPI app. A UTR can be used only once.
+  utr               String?       @unique
+  utrSubmittedAt    DateTime?
+  utrAttempts       Int           @default(0)
+  paidAt            DateTime?
+  // unpaid orders are cancelled after this time (reset if the owner rejects a UTR)
+  payBy             DateTime?
+  createdAt         DateTime      @default(now())
+}
+
+// A "forgot password" link. Only a hash of the secret is stored, so the database alone cannot
+// be used to reset anyone's password. A link works once and expires.
+model PasswordReset {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId, createdAt])
+}
