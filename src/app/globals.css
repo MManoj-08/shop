@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* Premium palette: deep forest green on warm ivory, with a muted gold accent */
+@theme {
+  --color-green-50: #f1f6f2;
+  --color-green-100: #e1ede4;
+  --color-green-200: #c4dacb;
+  --color-green-300: #9ac0a6;
+  --color-green-400: #63a07a;
+  --color-green-500: #3a8559;
+  --color-green-600: #1f6b45;
+  --color-green-700: #195a3a;
+  --color-green-800: #144a30;
+  --color-green-900: #0f3b26;
+  --color-green-950: #0b2418;
+  --color-gold: #b8893b;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Tailwind 4 borders default to black; make them a soft grey unless a colour is given */
+@layer base {
+  *,
+  ::before,
+  ::after,
+  ::file-selector-button {
+    border-color: var(--color-stone-200);
+  }
+}
+
+:root {
+  color-scheme: light;
+  --background: #faf8f3;
+  --foreground: #14241b;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+input,
+select,
+textarea {
+  color: #10241a;
+}
+input::placeholder {
+  color: #7d8c82;
+}
+
+/* ---- Clean panels (kept under the old glass-* names so every component picks them up) ---- */
+.glass-bar {
+  background: rgba(250, 248, 243, 0.88);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid rgba(20, 36, 27, 0.08);
+}
+.glass-strong {
+  background: #ffffff;
+  border: 1px solid rgba(20, 36, 27, 0.08);
+  box-shadow: 0 24px 60px -12px rgba(20, 36, 27, 0.22), 0 2px 6px rgba(20, 36, 27, 0.04);
+}
+.glass-dark {
+  background: rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ---- Endless scrolling strip (moves left to right) ---- */
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 30s linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(4deg); }
+}
+.floaty { animation: floaty 6s ease-in-out infinite; }
+
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.menu-in { animation: menu-in 160ms ease-out; }
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slide-up { animation: slide-up 700ms ease-out both; }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .faq-plus { transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  .floaty, .menu-in, .slide-up { animation: none; }
+}
