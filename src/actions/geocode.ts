@@ -33,7 +33,7 @@ export async function guessAddress(lat: number, lng: number): Promise<AddressGue
   try {
     const res = await fetch(url, {
       // the service asks every app to identify itself
-      headers: { "User-Agent": "MangaloreStoresCheckout/1.0" },
+      headers: { "User-Agent": "KudlaSantheCheckout/1.0" },
       signal: AbortSignal.timeout(8000),
       cache: "no-store",
     });
