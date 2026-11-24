@@ -4,20 +4,6 @@ A full-stack grocery delivery web app for a real neighbourhood shop in Bangalore
 
 Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS 4**, **Prisma** and **PostgreSQL (Neon)**.
 
-| Storefront | Fruits (bilingual: English / Kannada) |
-|---|---|
-| ![Home page](docs/screenshots/01-home.jpg) | ![Fruits category](docs/screenshots/02-fruits-category.jpg) |
-
-| Pay by UPI QR, enter the UTR | Owner: check a payment |
-|---|---|
-| ![UPI payment](docs/screenshots/03-upi-payment.jpg) | ![Check payment](docs/screenshots/06-check-payment.jpg) |
-
-| Owner dashboard | Sales by day |
-|---|---|
-| ![Owner dashboard](docs/screenshots/04-owner-dashboard.jpg) | ![Sales chart and daily tracker](docs/screenshots/05-sales-chart.jpg) |
-
-> The screenshots use demo data.
-
 ## Features
 
 **Customers**
